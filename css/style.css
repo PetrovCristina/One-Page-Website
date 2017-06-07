@@ -116,10 +116,10 @@ p {
       height: 750px;
     }
     .header img {
-      width: 80%;
+      width: 50%;
       height: 300px;
-      margin: 0px 0px 0px 20px;1
-    }
+      margin-top: 0px;
+  }
     .header .btn {
       font-size: 10px;
       margin-left: 20px;
@@ -129,7 +129,7 @@ p {
       font-size: 20px;
     }
     .header p {
-      font-size: 10px;
+      font-size: 15px;
     }
 }
 
@@ -307,6 +307,9 @@ p {
   margin:  -3px 0 0 5px;
 }
 
+.fa {
+  padding: 10px;
+}
 /*go to top */
 #myBtn {
     display: none; /* Hidden by default */
