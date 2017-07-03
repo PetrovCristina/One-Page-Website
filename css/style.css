@@ -116,9 +116,10 @@ p {
       height: 750px;
     }
     .header img {
-      width: 50%;
-      height: 300px;
-      margin-top: 0px;
+      width: 40%;
+      height: 200px;
+      margin-top: -30px;
+      margin-right: 60px;
   }
     .header .btn {
       font-size: 10px;
@@ -328,4 +329,10 @@ p {
 
 #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.about {
+	width: 200px;
+	height: 200px;
+	margin-left: 40px;
 }
