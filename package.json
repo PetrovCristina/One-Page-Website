@@ -1,0 +1,26 @@
+{
+  "name": "one-page-website",
+  "version": "1.0.0",
+  "description": "My web-site",
+  "main": "index.js",
+  "dependencies": {
+    "animate.css": "^3.5.2",
+    "bootstrap": "^3.3.7",
+    "less": "^2.7.2",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BraduCristina/One-Page-Website.git"
+  },
+  "author": "KMovie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BraduCristina/One-Page-Website/issues"
+  },
+  "homepage": "https://github.com/BraduCristina/One-Page-Website#readme"
+}
