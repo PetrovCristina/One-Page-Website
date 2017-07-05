@@ -7,16 +7,14 @@
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.7",
     "less": "^2.7.2",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "yarn": "^0.27.5"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/BraduCristina/One-Page-Website.git"
-  },
+  "repository": "git+https://github.com/BraduCristina/One-Page-Website.git",
   "author": "KMovie",
   "license": "ISC",
   "bugs": {
