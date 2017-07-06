@@ -21,12 +21,12 @@ const Footer = () => (
 
         <div className="col-lg-4 col-md-4">
           <h4>Stay in touch</h4>
-          <i className="social fa fa-facebook" aria-hidden="true"></i>
-          <i className="social fa fa-twitter" aria-hidden="true"></i>
-          <i className="social fa fa-linkedin" aria-hidden="true"></i>
-          <i className="social fa fa-pinterest" aria-hidden="true"></i>
-          <i className="social fa fa-youtube" aria-hidden="true"></i>
-          <i className="social fa fa-github" aria-hidden="true"></i>
+<span className="social icon-twitter-square"></span>
+<span className="social icon-facebook-square"></span>
+<span className="social icon-linkedin-square"></span>
+<span className="social icon-pinterest-square"></span>
+<span className="social icon-youtube-square"></span>
+<span className="social icon-git-square"></span>
           <input type="email" placeholder="Subscribe For Updates" />
           <button type="button" className="btn btn-success" name="button">Subscribe </button>
         </div>
