@@ -8,10 +8,10 @@ const Footer = () => (
       <div className="row">
         <div className="col-lg-4 col-md-4">
           <h4 className="wow fadeInUp">Contact Us</h4>
-          <p><i className="fa fa-home" aria-hidden="true"></i>111 Main Street, Washington DC, 22222</p>
-          <p><i className="fa fa-envelope" aria-hidden="true"></i>info@media.com</p>
-          <p><i className="fa fa-phone" aria-hidden="true"></i>+1 222 222 2222</p>
-          <p><i className="fa fa-globe" aria-hidden="true"></i>www.media.com</p>
+          <p><span className="icon-home"></span>111 Main Street, Washington DC, 22222</p>
+          <p><span className="icon-envelope"></span>info@media.com</p>
+          <p><span className="icon-phone"></span>+1 222 222 2222</p>
+          <p><span className="icon-globe"></span>www.media.com</p>
         </div>
         <div className="col-lg-4 col-md-4">
   		<img src="https://s3.amazonaws.com/clarityfm-production/attachments/1916/default/logo_blog.png?1406761370" alt="" className="about" />

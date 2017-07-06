@@ -11,19 +11,19 @@ const Contact = () => (
         <div className="col-lg-6 col-md-6">
           <div className="input-group input-group-lg wow fadeInUp" data-wow-delay="0.8s">
             <span className="input-group-addon" id="sizing-addon1">
-              <i className="fa fa-user" aria-hidden="true"></i>
+              <span className="icon-user"></span>
             </span>
             <input className="form-control" type="text" aria-describedby="sizing-addon1" placeholder="Full Name" />
           </div>
           <div className="input-group input-group-lg wow fadeInUp" data-wow-delay="1.2s">
             <span className="input-group-addon" id="sizing-addon1">
-              <i className="fa fa-envelope" aria-hidden="true"></i>
+              <span className="icon-envelope"></span>
             </span>
             <input className="form-control" type="text" aria-describedby="sizing-addon1" placeholder="Email Address" />
           </div>
           <div className="input-group input-group-lg wow fadeInUp" data-wow-delay="1.6s">
             <span className="input-group-addon" id="sizing-addon1">
-              <i className="fa fa-phone" aria-hidden="true"></i>
+              <span className="icon-phone"></span>
             </span>
             <input className="form-control" type="text" aria-describedby="sizing-addon1" placeholder="Phone Number" />
           </div>
