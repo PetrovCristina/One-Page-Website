@@ -1,15 +1,15 @@
 {
-  "extends": ["airbnb",
-  "plugin:flowtype/recommended"
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
   ],
-  "env":{
-  "jest": true
-  },
   "plugins": [
-  "flowtype",
+    "flowtype",
     "compat"
   ],
-  "parser": "babel-eslint",
+  "env": {
+    "jest": true
+  },
   "rules": {
     "semi": [2, "never"],
     "no-unexpected-multiline": 2,
