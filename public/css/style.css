@@ -1,9 +1,338 @@
-body {
-  width: 960px;
-  margin: auto;
-  font-family: sans-serif;
+/* !important - for overwritting the bootstrap style */
+* {
+  padding: 0;
+  margin: 0;
 }
 
-h1 {
-  color: limegreen;
+body {
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+a{
+  text-decoration: none;
+  transition: all 500ms ease-in-out;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h4 {
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+p {
+  font-size: 15px;
+  line-height: 21px;
+}
+
+.btn {
+  transition: all 300ms ease-in-out;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color:  #ededed !important;
+  color: #3c3c3c !important;
+  border: 1px solid #fff !important;
+}
+
+/*NAVIGATION */
+.navbar {
+  background-color: #222222 !important;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', Arial, sans-serif;
+  font-weight: 700;
+}
+
+.navbar a {
+  color: #fff !important;
+  opacity: 0.7;
+}
+
+.navbar a:hover {
+  opacity: 1;
+  background-color: #111111 !important;
+}
+
+/*Header */
+.header {
+  height: 600px;
+  width: 100%;
+  padding: 30px 0 30px;
+  margin-top: 50px;
+  background-image: url(/static/images/bg3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.header img {
+  height: 400px;
+  width: 300px;
+  margin: 50px 0 0 100px;
+  border-radius: 100%;
+}
+
+.header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  padding-top: 30px;
+}
+
+.header h1,
+.header p,
+.header button {
+  margin-top: 20px;
+}
+
+.header button {
+  margin-top: 20px;
+}
+
+.header .btn {
+  border-radius: 0;
+  margin: 40px 20px;
+}
+
+@media(max-width: 768px) {
+    .header {
+      padding: 30px;
+      height: 750px;
+    }
+    .header img {
+      width: 40%;
+      height: 200px;
+      margin-top: -30px;
+      margin-right: 60px;
+  }
+    .header .btn {
+      font-size: 10px;
+      margin-left: 20px;
+    }
+
+    .header h1 {
+      font-size: 20px;
+    }
+    .header p {
+      font-size: 15px;
+    }
+}
+
+
+/* Portfolio */
+.portfolio {
+  padding: 80px 0 80px;
+  text-align: center;
+  background-color: #E2F4FB;
+}
+
+.portfolio h2,
+.portfolio h4 {
+  color: #4c4c4c;
+  margin: 20px 0 20px;
+}
+
+.portfolio p {
+  color: #737373;
+  font-size: 14px;
+  padding-bottom: 40px;
+}
+
+.portfolio i {
+  height: 80px;
+  width: 80px;
+  font-size: 30px;
+  padding: 25px 20px;
+  border-radius: 50%;
+  background-color: #7F7FFF;
+  color: #fff;
+}
+
+@media(max-width: 768px) {
+  .portfolio {
+    padding: 30px;
+  }
+}
+
+/* Blog List */
+.blog {
+  padding: 50px 0 80px;
+  text-align: center;
+}
+
+.blog b,
+.blog h2,
+.blog h4 {
+  margin: 20px 0 20px;
+  color: #4c4c4c;
+}
+
+.blog p {
+  color: #737373;
+}
+
+.blog img {
+  height: 200px;
+  width: 150px;
+  margin-top: 80px;
+}
+
+.blog i {
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 50%;
+  background-color: #a0db8e;
+  color: #fff;
+}
+
+.blog a:hover i {
+  background-color: #709963
+}
+
+/*Publications*/
+.publication {
+  padding: 50px 0 80px;
+  background-color: #3399ff;
+  text-align: center;
+  color: #fff;
+}
+
+.publication h2 {
+  color: #5e5e5e;
+}
+
+.publication p {
+  padding-bottom: 40px;
+}
+
+.publication img {
+  width: 200px;
+  opacity: 0.6;
+  cursor: pointer;
+  margin: 40px 0;
+  transition: all 500ms ease-in-out;
+}
+
+.publication li:hover img {
+  opacity: 1;
+}
+
+/* Contact */
+.contact {
+  padding: 50px 0 80px;
+  text-align: center;
+}
+
+.contact p {
+  padding-bottom: 80px;
+  color: #737373;
+}
+
+.contact h2 {
+  color: #4c4c4c;
+  margin: 20px 0 20px;
+}
+
+.contact .input-group {
+  margin-bottom: 25px;
+}
+
+.contact .form-control {
+  border-radius: 0 !important;
+}
+
+.contact span {
+  border-radius: 0 !important;
+}
+
+.contact .btn {
+  border-radius: 0;
+  width: 100%;
+  font-size: 15px;
+  background-color: #f08080;
+  color: #fff;
+}
+
+.contact .btn:hover {
+  background-color: #a85959 !important;
+  color: #fff !important;
+}
+
+/* Footer */
+.footer {
+  padding: 30px;
+  color: #cccccc;
+  background-color: #222222;
+}
+
+.footer .social {
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  margin-right: 5px;
+}
+
+.footer input {
+  height: 40px;
+  width: 160px;
+  padding: 5px;
+  border: none;
+  background-color: #cccccc;
+  color: #000;
+}
+
+.footer .btn {
+  padding: 10px 5px 10px;
+  margin:  -3px 0 0 5px;
+}
+
+.fa {
+  padding: 10px;
+}
+/*go to top */
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #00D4FF; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 50px; /* Rounded corners */
+}
+
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
+.about {
+	width: 200px;
+	height: 200px;
+	margin-left: 40px;
 }
