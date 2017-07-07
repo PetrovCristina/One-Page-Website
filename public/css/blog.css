@@ -1,0 +1,36 @@
+/* Blog List */
+.blog {
+  padding: 50px 0 80px;
+  text-align: center;
+}
+
+.blog b,
+.blog h2,
+.blog h4 {
+  margin: 20px 0 20px;
+  color: #4c4c4c;
+}
+
+.blog p {
+  color: #737373;
+}
+
+.blog img {
+  height: 200px;
+  width: 150px;
+  margin-top: 80px;
+}
+
+.blog span{
+  height: 30px;
+  width: 30px;
+  padding: 5px;
+  font-size: 17px;
+  border-radius: 50%;
+  background-color: #a0db8e;
+  color: #fff;
+}
+
+.blog a:hover span{
+  background-color: #709963
+}

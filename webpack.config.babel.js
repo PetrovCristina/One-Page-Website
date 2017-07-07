@@ -20,6 +20,19 @@ export default {
   module: {
     rules: [
       { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
+      {test: /\.less$/,
+            use: [{
+                loader: "style-loader"
+            }, {
+                loader: "css-loader", options: {
+                    sourceMap: true
+                }
+            }, {
+                loader: "less-loader", options: {
+                    sourceMap: true
+                }
+              }
+            }
     ],
   },
   devtool: isProd ? false : 'source-map',
