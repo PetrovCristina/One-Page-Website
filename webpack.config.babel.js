@@ -9,7 +9,7 @@ import webpack from 'webpack'
 
 export default {
   entry: [
-	'react-hot-loader/patch',
+    'react-hot-loader/patch',
     './src/client',
   ],
   output: {
@@ -18,22 +18,24 @@ export default {
     publicPath: isProd ? '/static/' : `http://localhost:${WDS_PORT}/dist/`,
   },
   module: {
-    rules: [
-      { test: /\.(js|jsx)$/, use: 'babel-loader', exclude: /node_modules/ },
-      {test: /\.less$/,
-            use: [{
-                loader: "style-loader"
-            }, {
-                loader: "css-loader", options: {
-                    sourceMap: true
-                }
-            }, {
-                loader: "less-loader", options: {
-                    sourceMap: true
-                }
-              }
-            }
-    ],
+    rules: [{
+      test: /\.(js|jsx)$/,
+      use: 'babel-loader',
+      exclude: /node_modules/
+    }, {
+      test: /\.less$/,
+      use: [{
+        loader: "style-loader"
+      }, {
+        loader: "css-loader", options: {
+          sourceMap: true
+        }
+      }, {
+        loader: "less-loader", options: {
+          sourceMap: true
+        }
+      }]
+    }],
   },
   devtool: isProd ? false : 'source-map',
   resolve: {
@@ -41,15 +43,15 @@ export default {
   },
   devServer: {
     port: WDS_PORT,
-	hot: true,
-	headers: {
-		'Access-Control-Allow-Origin': '*',
-	},
+    hot: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
   plugins: [
-	new webpack.optimize.OccurrenceOrderPlugin(),
-	new webpack.HotModuleReplacementPlugin(),
-	new webpack.NamedModulesPlugin(),
-	new webpack.NoEmitOnErrorsPlugin(),
-	],
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+  ],
 }
