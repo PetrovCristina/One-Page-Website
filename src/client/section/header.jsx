@@ -19,7 +19,7 @@ const Header = () => (
               <a href="#contact"><button className="btn btn-lg btn-primary">Contact</button></a>
         </div>
         <div className="col-xs-6 col-md-6 wow bounceInRight ">
-              <img src="/static/images/allow.jpg" alt="" className="img-circle img-responsive" />
+              <img src="/public/images/allow.jpg" alt="" className="img-circle img-responsive" />
         </div>
       </div>
     </div>

@@ -3,6 +3,8 @@
 import { APP_CONTAINER_CLASS, STATIC_PATH, WDS_PORT } from '../shared/config'
 import { isProd } from '../shared/util'
 
+const css = isProd ? `<link rel="stylesheet" href="${STATIC_PATH}/css/style.css">` : ``
+
 const renderApp = (title: string) =>
 `<!doctype html>
 <html>
@@ -11,7 +13,7 @@ const renderApp = (title: string) =>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>One Page Website</title>
-    <link rel="stylesheet" href="${STATIC_PATH}/css/style.css">
+    ${css}
   </head>
   <body>
     <div class="${APP_CONTAINER_CLASS}"></div>

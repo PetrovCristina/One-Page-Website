@@ -7,32 +7,64 @@ import { isProd } from './src/shared/util'
 
 import webpack from 'webpack'
 
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+
+const extractLess = new ExtractTextPlugin({
+    filename: "[name].[contenthash].css",
+    disable: process.env.NODE_ENV === "development"
+});
+
 export default {
+
   entry: [
     'react-hot-loader/patch',
     './src/client',
   ],
+
   output: {
     filename: 'js/bundle.js',
     path: path.resolve(__dirname, 'dist'),
     publicPath: isProd ? '/static/' : `http://localhost:${WDS_PORT}/dist/`,
   },
+
   module: {
-    rules: [{
-      test: /\.(js|jsx)$/,
-      use: 'babel-loader',
-      exclude: /node_modules/
-    }, {
-      test: /\.less$/,
-      use: [{
-        loader: "style-loader"
-      }, {
-        loader: "less-loader", options: {
-          sourceMap: true
-        }
-      }]
-    }],
+    rules: [
+      {
+       test: /\.css$/,
+       use: ExtractTextPlugin.extract({
+         fallback: "style-loader",
+         use: "css-loader"
+       })
+     },
+      {
+        test: /\.js(x)$/,
+        exclude: /(node_modules|bower_components)/,
+        use: [{
+            loader: 'babel-loader',
+            options: {
+              presets: ['env']
+            }
+        }]
+      },
+      {
+        test: /\.less$/,
+        use: extractLess.extract({
+        use: [{
+            loader: 'style-loader',
+        }, {
+            loader: 'css-loader',
+            options: {
+              url: false,
+            }
+        }, {
+            loader: 'less-loader',
+        }],
+        fallback: "style-loader"
+      })
+      }
+    ]
   },
+
   devtool: isProd ? false : 'source-map',
   resolve: {
     extensions: ['.less', '.js', '.jsx'],
@@ -49,5 +81,7 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
+    new ExtractTextPlugin('styles.css'),
   ],
+
 }
