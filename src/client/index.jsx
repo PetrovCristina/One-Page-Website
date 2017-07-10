@@ -9,7 +9,7 @@ import { AppContainer } from 'react-hot-loader'
 import App from './app'
 import { APP_CONTAINER_SELECTOR } from '../shared/config'
 
-import '../../public/css/style.less'
+import './less/style.less'
 
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
 

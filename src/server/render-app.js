@@ -11,8 +11,6 @@ const renderApp = (title: string) =>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>One Page Website</title>
-    <link rel="stylesheet" href="${STATIC_PATH}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${STATIC_PATH}/css/animate.min.css">
     <link rel="stylesheet" href="${STATIC_PATH}/css/style.css">
   </head>
   <body>

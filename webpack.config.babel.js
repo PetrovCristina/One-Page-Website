@@ -27,10 +27,6 @@ export default {
       use: [{
         loader: "style-loader"
       }, {
-        loader: "css-loader", options: {
-          sourceMap: true
-        }
-      }, {
         loader: "less-loader", options: {
           sourceMap: true
         }
@@ -39,7 +35,7 @@ export default {
   },
   devtool: isProd ? false : 'source-map',
   resolve: {
-    extensions: ['.js', '.jsx'],
+    extensions: ['.less', '.js', '.jsx'],
   },
   devServer: {
     port: WDS_PORT,
