@@ -36,7 +36,7 @@ class App extends React.Component {
 			.then(res => res.json())
 			.then(res => this.setState({ portfolioData: res }));
 
-		fetch('http://localhost:8000/public/data/blogData.json')
+	fetch('http://localhost:8000/public/data/blogData.json')
 				.then(res => res.json())
 				.then(res => this.setState({ blogData: res }));
 
@@ -52,7 +52,7 @@ class App extends React.Component {
 				<Navbar />,
 				<Header />,
 				<Portfolio portfolio={this.state.portfolioData} />,
-				<Blog />,
+				<Blog blog={this.state.blogData} />,
 				<Publications />,
 				<Contact />,
 				<Footer />

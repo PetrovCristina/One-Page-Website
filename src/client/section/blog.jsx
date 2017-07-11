@@ -5,7 +5,7 @@ import React from 'react'
 import BlogItem from './blogItem'
 
 let Blog = ({blog}) => (
-  blog && <div className="blog" id="blog">
+  blog ? <div className="blog" id="blog">
     <div className="container">
 
      <h4>{blog.title}</h4>
@@ -15,7 +15,7 @@ let Blog = ({blog}) => (
         {blog.items.map(item => <BlogItem data={item} key={item.title} />)}
       </div>
     </div>
-  </div>
+  </div> : <div>Loading...</div>
 )
 
 export default Blog
