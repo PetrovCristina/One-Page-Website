@@ -3,10 +3,9 @@
 import React from 'react'
 
 import BlogItem from './blogItem'
-import blog from './blogData'
 
-let Blog = () => (
-  <div className="blog" id="blog">
+let Blog = ({blog}) => (
+  blog && <div className="blog" id="blog">
     <div className="container">
 
      <h4>{blog.title}</h4>

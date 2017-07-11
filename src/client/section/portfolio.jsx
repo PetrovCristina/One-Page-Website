@@ -3,10 +3,9 @@
 import React from 'react'
 
 import PortfolioItem from './portfolioItem'
-import portfolio from './portfolioData'
 
-let Portfolio = () => (
-  <div className="portfolio" id="portfolio">
+let Portfolio = ({portfolio}) => (
+  portfolio && <div className="portfolio" id="portfolio">
     <div className="container">
 
       <h2 className="wow fadeInUp">{portfolio.title}</h2>
