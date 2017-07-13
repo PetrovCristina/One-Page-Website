@@ -7,11 +7,11 @@ const Navbar = () => (
     <div className="container">
       <div className="navbar-header">
         <button className="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
-            <span className="icon-bar"></span>
+          <span className="icon-bar" />
+          <span className="icon-bar" />
+          <span className="icon-bar" />
         </button>
-        <a href="#" className="navbar-brand">My Blog</a>
+        <a href="/" className="navbar-brand">My Blog</a>
       </div>
       <div className="navbar-collapse collapse">
         <ul className="nav navbar-nav navbar-right">

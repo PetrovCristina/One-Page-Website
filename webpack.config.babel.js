@@ -1,18 +1,17 @@
 // @flow
 
 import path from 'path'
+import webpack from 'webpack'
 
 import { WDS_PORT } from './src/shared/config'
 import { isProd } from './src/shared/util'
 
-import webpack from 'webpack'
-
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const extractLess = new ExtractTextPlugin({
-    filename: "[name].[contenthash].css",
-    disable: process.env.NODE_ENV === "development"
-});
+  filename: '[name].[contenthash].css',
+  disable: process.env.NODE_ENV === 'development',
+})
 
 export default {
 
@@ -30,39 +29,36 @@ export default {
   module: {
     rules: [
       {
-       test: /\.css$/,
-       use: ExtractTextPlugin.extract({
-         fallback: "style-loader",
-         use: "css-loader"
-       })
-     },
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
+      },
       {
         test: /\.js(x)$/,
         exclude: /(node_modules|bower_components)/,
         use: [{
-            loader: 'babel-loader',
-            options: {
-              presets: ['env']
-            }
-        }]
+          loader: 'babel-loader',
+        }],
       },
       {
         test: /\.less$/,
         use: extractLess.extract({
-        use: [{
+          use: [{
             loader: 'style-loader',
-        }, {
+          }, {
             loader: 'css-loader',
             options: {
               url: false,
-            }
-        }, {
+            },
+          }, {
             loader: 'less-loader',
-        }],
-        fallback: "style-loader"
-      })
-      }
-    ]
+          }],
+          fallback: 'style-loader',
+        }),
+      },
+    ],
   },
 
   devtool: isProd ? false : 'source-map',

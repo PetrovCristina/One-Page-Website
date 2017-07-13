@@ -2,9 +2,9 @@
   "presets": [
     "env",
     "flow",
-	"react"
+    "react"
   ],
   "plugins": [
-	"flow-react-proptypes"
-	]
+    "flow-react-proptypes"
+  ]
 }

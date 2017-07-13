@@ -4,9 +4,9 @@ import React from 'react'
 
 import PortfolioItem from './portfolioItem'
 
-let Portfolio = ({portfolio}) => (
+const Portfolio = ({ portfolio }: Object) => (
   portfolio ? <div className="portfolio" id="portfolio">
-     <div className="container">
+    <div className="container">
 
       <h2 className="wow fadeInUp">{portfolio.title}</h2>
       <p className="wow fadeInUp" data-wow-delay="0.4s">{portfolio.description}</p>

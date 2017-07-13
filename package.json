@@ -4,7 +4,7 @@
   "description": "My web-site",
   "main": "index.js",
   "browserslist": [
-    "> 1%"
+    "last 2 Chrome versions"
   ],
   "dependencies": {
     "babel-polyfill": "^6.23.0",
@@ -31,6 +31,7 @@
     "babel-preset-react": "^6.24.1",
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
+    "empty": "^0.10.1",
     "eslint": "^4.1.1",
     "eslint-config-airbnb": "^15.0.2",
     "eslint-import-resolver-babel-module": "3.0.0",
@@ -58,14 +59,13 @@
     "start": "yarn dev:start",
     "dev:start": "nodemon -e js,jsx --ignore lib --ignore dist --exec babel-node src/server",
     "dev:wds": "webpack-dev-server --progress",
-    "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack --progress",
+    "prod:build": "rimraf lib dist && babel src -d lib --ignore .test.js && cross-env NODE_ENV=production webpack -p --progress",
     "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "test": "yarn lint && flow && jest --coverage",
     "precommit": "yarn test",
-    "prepush": "yarn test && yarn prod:build",
-    "esfix": "eslint src/server/render-app.js --fix"
+    "prepush": "yarn test && yarn prod:build"
   },
   "repository": "git+https://github.com/BraduCristina/One-Page-Website.git",
   "author": "KMovie",

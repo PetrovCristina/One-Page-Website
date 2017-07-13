@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react'
+import { WOW } from 'wowjs'
 
 import Navbar from './section/navbar'
 import Header from './section/header'
@@ -9,55 +10,49 @@ import Blog from './section/blog'
 import Publications from './section/publications'
 import Contact from './section/contact'
 import Footer from './section/footer'
-import {WOW} from 'wowjs'
 
 class App extends React.Component {
+  state: Object
+  wow: Object
 
-	constructor(props) {
-		super(props)
+  constructor(props: Object) {
+    super(props)
+    this.state = {
+      portfolioData: null,
+      blogData: null,
+    }
+    this.wow = new WOW()
+  }
 
-		this.wow = new WOW();
+  componentDidMount() {
+    this.wow.init()
 
-		this.state = {
-			portfolioData: null
-		}
+    fetch('http://localhost:8000/public/data/portfolioData.json')
+      .then(res => res.json())
+      .then(res => this.setState({ portfolioData: res }))
 
-		this.state = {
-			blogData: null
-		}
-	}
+    fetch('http://localhost:8000/public/data/blogData.json')
+      .then(res => res.json())
+      .then(res => this.setState({ blogData: res }))
+  }
 
+  componentDidUpdate() {
+    this.wow.sync()
+  }
 
-	componentDidMount() {
-
-		this.wow.init();
-
-		fetch('http://localhost:8000/public/data/portfolioData.json')
-			.then(res => res.json())
-			.then(res => this.setState({ portfolioData: res }));
-
-	fetch('http://localhost:8000/public/data/blogData.json')
-				.then(res => res.json())
-				.then(res => this.setState({ blogData: res }));
-
-	}
-
-	componentDidUpdate() {
-		this.wow.sync()
-	}
-
-	render () {
-		return (
-			<div>
-				<Navbar />,
-				<Header />,
-				<Portfolio portfolio={this.state.portfolioData} />,
-				<Blog blog={this.state.blogData} />,
-				<Publications />,
-				<Contact />,
-				<Footer />
-			</div>
-		)
-	}
+  render() {
+    return (
+      <div>
+        <Navbar />,
+        <Header />,
+        <Portfolio portfolio={this.state.portfolioData} />,
+        <Blog blog={this.state.blogData} />,
+        <Publications />,
+        <Contact />,
+        <Footer />
+      </div>
+    )
+  }
 }
+
 export default App

@@ -13,10 +13,11 @@ import './less/style.less'
 
 const rootEl = document.querySelector(APP_CONTAINER_SELECTOR)
 
-const wrapApp = AppComponent =>
+const wrapApp = AppComponent => (
   <AppContainer>
     <AppComponent />
   </AppContainer>
+)
 
 ReactDOM.render(wrapApp(App), rootEl)
 
