@@ -9,7 +9,7 @@ import { isProd } from './src/shared/util'
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const extractLess = new ExtractTextPlugin({
-  filename: '[name].[contenthash].css',
+  filename: 'style.css',
   disable: process.env.NODE_ENV === 'development',
 })
 
@@ -29,15 +29,8 @@ export default {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader',
-        }),
-      },
-      {
-        test: /\.js(x)$/,
-        exclude: /(node_modules|bower_components)/,
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
         use: [{
           loader: 'babel-loader',
         }],
@@ -46,8 +39,6 @@ export default {
         test: /\.less$/,
         use: extractLess.extract({
           use: [{
-            loader: 'style-loader',
-          }, {
             loader: 'css-loader',
             options: {
               url: false,
@@ -77,7 +68,7 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    new ExtractTextPlugin('styles.css'),
+    extractLess,
   ],
 
 }
