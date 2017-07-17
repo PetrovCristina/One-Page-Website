@@ -27,11 +27,11 @@ class App extends React.Component {
   componentDidMount() {
     this.wow.init()
 
-    fetch('http://localhost:8000/public/data/portfolioData.json')
+    fetch('public/data/portfolioData.json')
       .then(res => res.json())
       .then(res => this.setState({ portfolioData: res }))
 
-    fetch('http://localhost:8000/public/data/blogData.json')
+    fetch('public/data/blogData.json')
       .then(res => res.json())
       .then(res => this.setState({ blogData: res }))
   }
