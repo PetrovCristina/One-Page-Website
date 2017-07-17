@@ -68,7 +68,7 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    extractLess
+    isProd ? extractLess : new ExtractTextPlugin('styles.css'),
   ],
 
 }
