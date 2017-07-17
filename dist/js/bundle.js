@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9b3986363fa3265629ab"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "93c6b997dd1839608706"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -42296,13 +42296,13 @@ var App = function (_React$Component) {
 
       this.wow.init();
 
-      fetch('http://localhost:8000/public/data/portfolioData.json').then(function (res) {
+      fetch('public/data/portfolioData.json').then(function (res) {
         return res.json();
       }).then(function (res) {
         return _this2.setState({ portfolioData: res });
       });
 
-      fetch('http://localhost:8000/public/data/blogData.json').then(function (res) {
+      fetch('public/data/blogData.json').then(function (res) {
         return res.json();
       }).then(function (res) {
         return _this2.setState({ blogData: res });
@@ -42740,7 +42740,7 @@ var Header = function Header() {
         _react2.default.createElement(
           'div',
           { className: 'col-xs-6 col-md-6 wow bounceInRight ' },
-          _react2.default.createElement('img', { src: '/public/images/allow.jpg', alt: '', className: 'img-circle img-responsive' })
+          _react2.default.createElement('img', { src: 'public/images/allow.jpg', alt: '', className: 'img-circle img-responsive' })
         )
       )
     )
@@ -42996,7 +42996,7 @@ var Publications = function Publications() {
           _react2.default.createElement(
             "li",
             null,
-            _react2.default.createElement("img", { src: "/public/images/clients/client1.png", alt: "" })
+            _react2.default.createElement("img", { src: "public/images/clients/client1.png", alt: "" })
           )
         ),
         _react2.default.createElement(
@@ -43005,7 +43005,7 @@ var Publications = function Publications() {
           _react2.default.createElement(
             "li",
             null,
-            _react2.default.createElement("img", { src: "/public/images/clients/client2.png", alt: "" })
+            _react2.default.createElement("img", { src: "public/images/clients/client2.png", alt: "" })
           )
         ),
         _react2.default.createElement(
@@ -43014,7 +43014,7 @@ var Publications = function Publications() {
           _react2.default.createElement(
             "li",
             null,
-            _react2.default.createElement("img", { src: "/public/images/clients/client3.png", alt: "" })
+            _react2.default.createElement("img", { src: "public/images/clients/client3.png", alt: "" })
           )
         ),
         _react2.default.createElement(
@@ -43023,7 +43023,7 @@ var Publications = function Publications() {
           _react2.default.createElement(
             "li",
             null,
-            _react2.default.createElement("img", { src: "/public/images/clients/client4.png", alt: "" })
+            _react2.default.createElement("img", { src: "public/images/clients/client4.png", alt: "" })
           )
         )
       )
