@@ -23,7 +23,7 @@ export default {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, '.'),
-    publicPath: isProd ? '/static/' : `http://localhost:${WDS_PORT}/dist/`,
+    publicPath: isProd ? '/static/' : `http://localhost:${WDS_PORT}/`,
   },
 
   module: {
@@ -68,7 +68,7 @@ export default {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    extractLess,
+    extractLess
   ],
 
 }
