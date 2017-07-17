@@ -3,7 +3,7 @@
 import { APP_CONTAINER_CLASS, STATIC_PATH, WDS_PORT } from '../shared/config'
 import { isProd } from '../shared/util'
 
-const css = isProd ? `<link rel="stylesheet" href="${STATIC_PATH}/css/style.css">` : ''
+const css = isProd ? `<link rel="stylesheet" href="style.css">` : ''
 
 const renderApp = () => (
   `<!doctype html>
@@ -17,7 +17,7 @@ const renderApp = () => (
     </head>
     <body>
       <div class="${APP_CONTAINER_CLASS}"></div>
-      <script src="${isProd ? STATIC_PATH : `http://localhost:${WDS_PORT}/dist`}/js/bundle.js"></script>
+      <script src="${isProd ? STATIC_PATH : `http://localhost:${WDS_PORT}`}/bundle.js"></script>
     </body>
   </html> `
 )
