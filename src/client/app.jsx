@@ -43,12 +43,12 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />,
-        <Header />,
-        <Portfolio portfolio={this.state.portfolioData} />,
-        <Blog blog={this.state.blogData} />,
-        <Publications />,
-        <Contact />,
+        <Navbar />
+        <Header />
+        <Portfolio portfolio={this.state.portfolioData} />
+        <Blog blog={this.state.blogData} />
+        <Publications />
+        <Contact />
         <Footer />
       </div>
     )

@@ -1,6 +1,5 @@
 // @flow
-
-import 'babel-polyfill'
+import 'bootstrap/js/collapse'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
