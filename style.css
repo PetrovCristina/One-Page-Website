@@ -4014,9 +4014,6 @@ p {
 .icon-snowflake-o:before {
   content: "\F2DC";
 }
-span {
-  padding: 10px;
-}
 /*go to top */
 #myBtn {
   display: none;

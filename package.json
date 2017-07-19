@@ -24,6 +24,7 @@
     "babel-jest": "^20.0.3",
     "babel-loader": "^7.1.1",
     "babel-plugin-flow-react-proptypes": "^3.4.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
@@ -62,7 +63,7 @@
     "prod:stop": "pm2 delete server",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "test": "yarn lint && flow && jest --coverage",
-    "precommit": "yarn prod:build && yarn test",
+    "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build"
   },
   "repository": "git+https://github.com/BraduCristina/One-Page-Website.git",

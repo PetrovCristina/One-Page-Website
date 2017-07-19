@@ -71,8 +71,8 @@ export default {
     isProd ? extractLess : new ExtractTextPlugin('styles.css'),
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
-    })
+      jQuery: 'jquery',
+    }),
   ],
 
 }

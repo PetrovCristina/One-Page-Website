@@ -3,7 +3,7 @@
 import { APP_CONTAINER_CLASS, STATIC_PATH, WDS_PORT } from '../shared/config'
 import { isProd } from '../shared/util'
 
-const css = isProd ? `<link rel="stylesheet" href="style.css">` : ''
+const css = isProd ? '<link rel="stylesheet" href="style.css">' : ''
 
 const renderApp = () => (
   `<!doctype html>
