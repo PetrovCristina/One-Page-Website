@@ -62,7 +62,7 @@
     "prod:stop": "pm2 delete server",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
     "test": "yarn lint && flow && jest --coverage",
-    "precommit": "yarn test",
+    "precommit": "yarn prod:build && yarn test",
     "prepush": "yarn test && yarn prod:build"
   },
   "repository": "git+https://github.com/BraduCristina/One-Page-Website.git",
