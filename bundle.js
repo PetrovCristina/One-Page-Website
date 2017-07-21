@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8abe25cc39bd32e28f96"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "be044080e9c7004c2ff1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -44806,7 +44806,7 @@ var Header = function Header() {
         { className: 'row' },
         _react2.default.createElement(
           'div',
-          { className: 'col-xs-6 col-md-6 wow bounceInLeft' },
+          { className: 'col-xs-7 col-md-6 wow bounceInLeft' },
           _react2.default.createElement(
             'h1',
             null,
@@ -44829,8 +44829,8 @@ var Header = function Header() {
         ),
         _react2.default.createElement(
           'div',
-          { className: 'col-xs-6 col-md-6 wow bounceInRight ' },
-          _react2.default.createElement('img', { src: 'public/images/allow.jpg', alt: '', className: 'img-circle img-responsive' })
+          { className: 'col-xs-5 col-md-6 wow bounceInRight ' },
+          _react2.default.createElement('img', { src: 'public/images/allow.jpg', alt: '', className: '' })
         )
       )
     )

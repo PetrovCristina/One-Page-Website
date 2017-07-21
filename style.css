@@ -3778,18 +3778,12 @@ p {
   margin: 40px 20px;
 }
 @media (max-width: 768px) {
-  * {
-    clear: left;
-  }
   .header {
     padding: 30px;
   }
   .header img {
-    width: 60%;
-    height: 200px;
-    margin-top: 150px;
-    margin-right: 60px;
-    margin: 50px 0 0 50px;
+    width: 200px;
+    height: 300px;
   }
   .header .btn {
     font-size: 10px;
@@ -3802,9 +3796,6 @@ p {
   .header p {
     font-size: 15px;
     margin-top: 20px;
-  }
-  .col-xs-6 {
-    width: 80%;
   }
 }
 /* Portfolio */

@@ -8,13 +8,13 @@ const Header = () => (
   <div id="header" className="header">
     <div className="container">
       <div className="row">
-        <div className="col-xs-6 col-md-6 wow bounceInLeft">
+        <div className="col-xs-7 col-md-6 wow bounceInLeft">
           <h1>Who am I?</h1>
           <p>{headerText}</p>
           <a href="#contact"><button className="btn btn-lg btn-primary">Contact</button></a>
         </div>
-        <div className="col-xs-6 col-md-6 wow bounceInRight ">
-          <img src="public/images/allow.jpg" alt="" className="img-circle img-responsive" />
+        <div className="col-xs-5 col-md-6 wow bounceInRight ">
+          <img src="public/images/allow.jpg" alt="" className="" />
         </div>
       </div>
     </div>
